@@ -2,12 +2,11 @@
   "name": "get-user-ip",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "getIp.js",
   "dependencies": {
-    "express": "^4.18.2"
+    "@netlify/functions": "^1.0.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "netlify dev"
   }
 }
-
