@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Kullanıcı IP Bilgileri";
+}
+
+<div class="container">
+    <h2>Kullanıcı IP Bilgileri</h2>
+    
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">IP Bilgileri</h5>
+            <p><strong>İstemci IP:</strong> @ViewBag.ClientIP</p>
+            
+            @if (!string.IsNullOrEmpty(ViewBag.ForwardedIP))
+            {
+                <p><strong>Forwarded IP (Proxy/Load Balancer):</strong> @ViewBag.ForwardedIP</p>
+            }
+            
+            <p><strong>Uzak IP:</strong> @ViewBag.RemoteIP</p>
+        </div>
+    </div>
+</div>
